@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020403" />
+<meta name="referrer" content="no-referrer" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="description" content="Operator link builder for a freelAInswer demo." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+<title>freelAInswer Operator Links</title>
+<link rel="stylesheet" href="./assets/styles/pages.css" />
+</head>
+<body class="page-shell" data-page="links">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="colour-bar" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="wordmark" href="./">freelAInswer</a>
+  <nav class="nav-links" aria-label="Demo">
+    <a href="./welcome.html">Demo run</a>
+    <a href="./demo/">Demo</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="section narrow" aria-labelledby="link-heading">
+    <p class="kicker">Operator link builder</p>
+    <h1 id="link-heading">Make a demo link.</h1>
+    <form class="link-form" id="linkForm">
+      <label>Base URL <input id="linkBase" name="base" type="url" /></label>
+      <label>Name <input id="linkName" name="name" value="Benny Ferraro" /></label>
+      <label>Studio <input id="linkStudio" name="studio" value="MoltoBennyMedia" /></label>
+      <label>Craft <input id="linkCraft" name="craft" value="Video / editor / filmmaker" /></label>
+      <label>Skin <input id="linkSkin" name="skin" value="frAIme" /></label>
+      <label>Entry
+        <select id="linkEntry" name="entry">
+          <option value="welcome">Demo run</option>
+          <option value="demo">Demo directly</option>
+        </select>
+      </label>
+    </form>
+    <div class="output-card">
+      <p class="kicker">Demo link</p>
+      <a id="generatedLink" class="generated-link" href="./welcome.html"></a>
+      <div class="button-row">
+        <button class="button button-primary" id="copyGenerated" type="button">Copy link</button>
+        <a class="button" id="openGenerated" href="./welcome.html">Open</a>
+        <a class="button" id="openQr" href="./qr.html">Phone</a>
+      </div>
+      <p id="copyStatus" class="micro" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<script src="./assets/js/demo.js"></script>
+</body>
+</html>

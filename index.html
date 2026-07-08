@@ -5,142 +5,77 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="theme-color" content="#020403" />
 <meta name="referrer" content="no-referrer" />
-<meta name="description" content="freelAIncer partner demo for creative freelancers and studio operators." />
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; worker-src 'self'; manifest-src 'self'; form-action 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
-<title>freelAIncer Demo</title>
-<link rel="stylesheet" href="assets/styles/tokens.css" />
-<link rel="stylesheet" href="demo/assets/styles/fonts.css" />
-<link rel="stylesheet" href="landing.css" />
-<style>
-  :root {
-    color-scheme: dark;
-    --color-paper: #020403;
-    --color-ink: #f6fbff;
-    --color-graphite: #a1a9ad;
-    --color-saffron-deep: #67f0a4;
-    --wrap: 1180px;
-  }
-  body {
-    background:
-      radial-gradient(circle at 15% 0, rgba(89, 205, 245, .16), transparent 24rem),
-      radial-gradient(circle at 80% 8%, rgba(103, 240, 164, .12), transparent 22rem),
-      linear-gradient(rgba(246, 251, 255, .035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(246, 251, 255, .035) 1px, transparent 1px),
-      #020403;
-    background-size: auto, auto, 40px 40px, 40px 40px, auto;
-  }
-  .site-header {
-    border-bottom: 1px solid rgba(246, 251, 255, .16);
-  }
-  .hero {
-    min-height: 62vh;
-    display: grid;
-    align-content: center;
-  }
-  .lead {
-    max-width: 720px;
-  }
-  .btn-primary {
-    background: #59cdf5;
-    border-color: #59cdf5;
-    color: #061014 !important;
-  }
-  .btn-ghost {
-    border-color: rgba(246, 251, 255, .28);
-    color: #f6fbff;
-  }
-  .takeaway-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-4);
-  }
-  .takeaway-card {
-    min-height: 13rem;
-    padding: var(--space-5);
-    border: 1px solid rgba(246, 251, 255, .2);
-    border-radius: var(--radius-md);
-    background: rgba(2, 4, 3, .72);
-  }
-  .takeaway-card h3 {
-    margin-top: 0;
-  }
-  .route-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-  }
-  .route-list a {
-    border: 1px solid rgba(246, 251, 255, .22);
-    border-radius: var(--radius-md);
-    padding: .75rem 1rem;
-    color: #f6fbff;
-    text-decoration: none;
-  }
-  @media (max-width: 820px) {
-    .takeaway-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+<meta name="description" content="Every hour, invoice, and chase, sorted by brAIn on your machine, with your AI." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+<title>freelAInswer - the answer.</title>
+<link rel="stylesheet" href="./assets/styles/pages.css" />
 </head>
-<body>
+<body class="page-shell" data-page="landing">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="colour-bar" aria-hidden="true"></div>
 <header class="site-header">
-  <a href="./" class="wordmark">freelAIncer</a>
-  <nav class="nav-links" aria-label="Main">
-    <a href="#takeaway">Takeaway</a>
-    <a href="demo/">Demo</a>
-    <a href="demo/invoicing/" class="btn btn-primary">Open invoicing</a>
+  <a class="wordmark" href="./">freelAInswer</a>
+  <nav class="nav-links" aria-label="Demo">
+    <a href="#try-heading">How it works</a>
+    <a href="./demo/">Demo</a>
+    <a class="button button-small" data-demo-link="welcome" href="./welcome.html">Try the demo</a>
   </nav>
 </header>
 <main id="main">
-  <section class="hero" aria-labelledby="hero-heading">
-    <p class="eyebrow">Partner demo</p>
-    <h1 id="hero-heading">A working preview for creative operators who need less admin drag.</h1>
-    <p class="lead">freelAIncer captures time, turns production history into invoice context, and gives solo studios a cleaner way to see what pays, what drains, and what needs chasing.</p>
-    <div class="btn-row">
-      <a href="demo/" class="btn btn-primary">Run the demo</a>
-      <a href="demo/invoicing/" class="btn btn-ghost">Open invoicing view</a>
+  <section class="hero-grid" aria-labelledby="hero-heading">
+    <div class="hero-copy">
+      <p class="kicker">For one-person studios drowning in admin</p>
+      <h1 id="hero-heading">You did the work. <span>Here's the answer.</span></h1>
+      <p class="lede">Every hour, invoice, and chase, sorted by brAIn on your machine, with your AI. The spreadsheet's dead.</p>
+      <div class="badge-row" aria-label="Trust points">
+        <span>Local-first</span>
+        <span>Your AI, your call</span>
+        <span>One-click export</span>
+        <span>AU-first (GST + ATO aware)</span>
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" data-demo-link="welcome" href="./welcome.html">Try the demo</a>
+        <a class="button" href="#try-heading">See how it works</a>
+      </div>
     </div>
+    <aside class="device-preview" aria-label="Demo preview">
+      <div class="device-top">
+        <span class="dot dot-blue"></span>
+        <span class="dot dot-green"></span>
+        <span class="dot dot-amber"></span>
+      </div>
+      <div class="mini-app">
+        <p class="mini-kicker">Today</p>
+        <h2>AUD $2,175 ready to bill</h2>
+        <div class="mini-row"><span>Capture week</span><strong>14.5h</strong></div>
+        <div class="mini-row"><span>Draft invoice</span><strong>ready</strong></div>
+        <div class="mini-row"><span>Chase sequence</span><strong>queued</strong></div>
+      </div>
+    </aside>
   </section>
 
-  <hr class="divider" />
-
-  <section class="section" id="takeaway" aria-labelledby="takeaway-heading">
-    <p class="eyebrow">What to try first</p>
-    <h2 id="takeaway-heading">A small product story, ready to click through.</h2>
-    <div class="takeaway-grid">
-      <article class="takeaway-card">
-        <h3>1. Start in the studio</h3>
-        <p class="body-text">The demo uses fictional local data, so it is safe to poke without accounts, tenants, or customer records.</p>
+  <section class="section" aria-labelledby="try-heading">
+    <p class="kicker">What to try first</p>
+    <h2 id="try-heading">What to try first</h2>
+    <div class="card-grid">
+      <article class="card">
+        <p class="card-index">01</p>
+        <h3>Capture the week</h3>
+        <p>Paste sample calendar text, sample receipt notes, or example email copy.</p>
       </article>
-      <article class="takeaway-card">
-        <h3>2. Follow time to money</h3>
-        <p class="body-text">Confirm proposed time, inspect projects, and see invoice drafts inherit the work context.</p>
+      <article class="card">
+        <p class="card-index">02</p>
+        <h3>Check what it found</h3>
+        <p>14.5 hours captured across 4 projects.</p>
       </article>
-      <article class="takeaway-card">
-        <h3>3. Ask the copilot</h3>
-        <p class="body-text">The Buddy panel demonstrates scoped AI assistance across gig, client, vertical, and whole-studio context.</p>
+      <article class="card">
+        <p class="card-index">03</p>
+        <h3>See the money</h3>
+        <p>AUD $2,175 billable this week.</p>
       </article>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section class="section" aria-labelledby="routes-heading">
-    <p class="eyebrow">Direct links</p>
-    <h2 id="routes-heading">Jump into the demo flow.</h2>
-    <div class="route-list">
-      <a href="demo/">Home</a>
-      <a href="demo/projects/">Projects</a>
-      <a href="demo/time/">Time</a>
-      <a href="demo/invoicing/">Invoicing</a>
-      <a href="demo/mirror/">Mirror</a>
-      <a href="demo/more/">More</a>
     </div>
   </section>
 </main>
+<script src="./assets/js/demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020403" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="Open the freelAInswer demo on your phone." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+<title>Open freelAInswer On Your Phone</title>
+<link rel="stylesheet" href="./assets/styles/pages.css" />
+</head>
+<body class="page-shell" data-page="qr">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="colour-bar" aria-hidden="true"></div>
+<main id="main" class="solo-main">
+  <section class="qr-shell" aria-labelledby="qr-heading">
+    <p class="kicker">Phone</p>
+    <h1 id="qr-heading">Open the demo on your phone.</h1>
+    <div class="qr-card">
+      <div id="qrCode" class="qr-code" aria-label="QR code for the demo URL"></div>
+    </div>
+    <a id="qrDemoLink" class="generated-link" href="./welcome.html"></a>
+    <div class="button-row center">
+      <button id="qrCopy" class="button button-primary" type="button">Copy link</button>
+      <a id="qrSms" class="button" href="#">SMS</a>
+      <a id="qrEmail" class="button" href="#">Email</a>
+    </div>
+    <p id="qrStatus" class="micro" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<script src="./assets/vendor/qrcode.js"></script>
+<script src="./assets/js/demo.js"></script>
+</body>
+</html>

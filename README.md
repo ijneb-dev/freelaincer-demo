@@ -1,21 +1,25 @@
-# freelAIncer demo
+# freelAInswer demo
 
-Public static demo package for `freelAIncer`.
+Public static GitHub Pages package for the Benny handoff.
 
-- Canonical share link: `https://ijneb.dev/freelaincer/`
 - Public repo Pages link: `https://ijneb-dev.github.io/freelaincer-demo/`
-- Future custom subdomain: `https://freelaincer.ijneb.dev`
-- GitHub Pages source: Actions workflow in `.github/workflows/pages.yml`
+- Public repo: `https://github.com/ijneb-dev/freelaincer-demo`
 - Demo entry: `/demo/`
-- Invoicing deep link: `/demo/invoicing/`
+- Link generator: `/links.html`
+- Phone handoff: `/qr.html?u=<encoded-demo-url>`
 
-This repository intentionally contains only static demo assets and fictional local data.
+This repository intentionally contains only static demo assets and fictional data. It does not call live services and does not write browser storage.
 
-To enable the future subdomain, add DNS:
+The private source repo owns the generator:
 
-```txt
-freelaincer CNAME ijneb-dev.github.io
+```bash
+pnpm demo:pages:build
+pnpm demo:pages:smoke
+pnpm demo:pages:link -- --base https://ijneb-dev.github.io/freelaincer-demo/
 ```
 
-Then attach `freelaincer.ijneb.dev` in GitHub Pages and enforce HTTPS after the
-certificate is issued.
+To sync this package from the private repo into this public repo:
+
+```bash
+pnpm demo:pages:sync -- --repo /path/to/freelaincer-demo
+```
